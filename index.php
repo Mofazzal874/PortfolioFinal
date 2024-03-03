@@ -570,7 +570,7 @@ mysqli_close($con);
                                 class="contact__form-input"></textarea>
                         </div>
 
-                        <button class="button" name="send" >Send Message</button>
+                        <button class="button" name="send">Send Message</button>
                     </form>
                 </div>
 

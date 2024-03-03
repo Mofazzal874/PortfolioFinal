@@ -13,7 +13,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO messages (person_name, person_mail, message) VALUES ('$name', '$email', '$message')";
 
     if ($con->query($sql) === TRUE) {
-        echo "Message sent successfully!";
+        echo "<script>alert('Message sent successfully!');</script>";
+        echo "<script>window.history.back();</script>"; // Redirect to the previous page
+        exit; // Stop further execution
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($con);
     }
@@ -21,3 +23,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Close database connection
 $con->close();
+
